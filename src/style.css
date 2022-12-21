@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  width: min-content;
+  height: min-content;
+}
