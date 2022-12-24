@@ -12,15 +12,13 @@ addBtn.addEventListener('click', (e) => {
     emptyContainer.innerHTML = '<p class="alert">Please add name and score</p>';
   } else {
     addNew();
+    addName.value = [];
+    addScore.value = [];
   }
 });
 
-// show data
-showgameData();
-
 // Show data
 const refreshBtn = document.querySelector('.refresh');
-refreshBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.location.reload();
+refreshBtn.addEventListener('click', () => {
+  showgameData();
 });

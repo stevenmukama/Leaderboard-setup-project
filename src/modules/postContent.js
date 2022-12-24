@@ -21,6 +21,10 @@ const addNew = async () => {
     .then((data) => {
       emptyContainer.innerHTML = `<p class="alert">${data.result}</p>`;
       alert.innerHTML = '<p class="alert-2">Click on refresh button to see the added data</p>';
+      setTimeout(() => {
+        alert.innerHTML = '';
+        emptyContainer.innerHTML = '';
+      }, 2000);
     });
 };
 
