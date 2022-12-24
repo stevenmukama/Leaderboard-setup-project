@@ -79,7 +79,8 @@
   padding-left: 5px;
 }
 
-.alert, .alert-2  {
+.alert,
+.alert-2 {
   text-align: center;
 }
 
@@ -91,4 +92,3 @@
 .alert-2 {
   color: #f20b00;
 }
-
