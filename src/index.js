@@ -1,19 +1,26 @@
-const inputs = [
-  {
-    id: 1,
-    name: 'Steven',
-    score: 20,
-  },
-  {
-    id: 2,
-    name: 'Steven',
-    score: 20,
-  },
-  {
-    id: 3,
-    name: 'Steven',
-    score: 30,
-  },
-];
+import './style.css';
+import addNew from './modules/postContent.js';
+import showgameData from './modules/getContent.js';
 
-export default inputs;
+const addBtn = document.querySelector('.submitbutton');
+const emptyContainer = document.querySelector('.emptycontent');
+const addName = document.querySelector('.addname');
+const addScore = document.querySelector('.addscore');
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (!addName.value || !addScore.value) {
+    emptyContainer.innerHTML = '<p class="alert">Please add name and score</p>';
+  } else {
+    addNew();
+  }
+});
+
+// show data
+showgameData();
+
+// Show data
+const refreshBtn = document.querySelector('.refresh');
+refreshBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.reload();
+});
